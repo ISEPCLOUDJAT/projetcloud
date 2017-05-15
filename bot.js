@@ -22,8 +22,6 @@ client.on('message', msg => {
   if (msg.content === 'hello') {
     msg.channel.send('Hello to you too, fellow !')
   }
-
-<<<<<<< HEAD
   // permet d'effectuer une recherche youtube
   youtube.searchYoutube(msg)
 
@@ -42,8 +40,4 @@ client.on('message', msg => {
   weather.Now(msg)
   weather.Forecast(msg)
 })
-=======
-ddddd
-
->>>>>>> test
 client.login(config.token)
