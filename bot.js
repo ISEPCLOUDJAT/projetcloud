@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const config = require('./config.js')
 const client = new Discord.Client()
+
 var youtube = require('./youtube.js')
 var translate = require('./translate.js')
 var pokemon = require('./pokemon.js')
