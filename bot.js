@@ -32,21 +32,16 @@ client.on('message', msg => {
   }
   // permet d'effectuer une recherche youtube
   youtube.searchYoutube(msg)
-
   // permet de traduire un message
   translate.translate(msg)
-
   // permet de tweeter avec l'utilisation de "!tweet"
   twitter.sendTweet(msg)
-
   // permet de rechercher un pokemon et le faire évoluer
   pokemon.pokemon(msg)
-
   // permet d'effectuer une recherche spotify
   spotify.spotify(msg)
-
   // permet d'afficher l'état de la météo d'une ville
-  weather.Now(msg)
-  weather.Forecast(msg)
+  weather.now(msg)
+  weather.forecast(msg)
 })
 client.login(config.token)

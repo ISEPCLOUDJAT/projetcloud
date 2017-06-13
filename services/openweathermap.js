@@ -10,7 +10,7 @@ var openWeatherMapQuery = querystring.stringify({
 })
 
 module.exports = {
-  Now: function (msg, callback) {
+  now: function (msg, callback) {
     if (msg.content.startsWith('!weather ')) {
       var a = 'http://api.openweathermap.org/data/2.5/weather?q=' + msg.content.substring(9) + '&' + openWeatherMapQuery
       weather.getPromise(a)
@@ -29,7 +29,7 @@ module.exports = {
       })
     }
   },
-  Forecast: function (msg, callback) {
+  forecast: function (msg, callback) {
     if (msg.content.startsWith('!forecast ')) {
       var a = 'http://api.openweathermap.org/data/2.5/forecast?q=' + msg.content.substring(10) + '&' + openWeatherMapQuery
       weather.getPromise(a)
