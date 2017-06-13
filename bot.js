@@ -1,6 +1,11 @@
 const Discord = require('discord.js')
 const config = require('./config.js')
 const client = new Discord.Client()
+var youtube = require('./services/youtube.js')
+var translate = require('./services/translate.js')
+var pokemon = require('./services/pokemon.js')
+var spotify = require('./services/spotify')
+var weather = require('./services/openweathermap.js')
 var twitter = require('./services/twitter.js')
 
 function sendMessage (content) {
@@ -9,12 +14,6 @@ function sendMessage (content) {
     c.send('Tweet reçu sur #botweet_jat :  ' + content)
   }
 }
-
-var youtube = require('./services/youtube.js')
-var translate = require('./services/translate.js')
-var pokemon = require('./services/pokemon.js')
-var spotify = require('./services/spotify')
-var weather = require('./services/openweathermap.js')
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.username}!`)
