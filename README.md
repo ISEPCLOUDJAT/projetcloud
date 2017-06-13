@@ -20,3 +20,7 @@ Jérémy GOUROU
 <!-- -->
 **!weather *city*** to have weather infos of the city</br>
 **!forecast *city***
+
+<h2>URL Azure:</h2>
+
+http://botjat.azurewebsites.net
