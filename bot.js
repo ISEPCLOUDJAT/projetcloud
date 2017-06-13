@@ -10,6 +10,12 @@ function sendMessage (content) {
   }
 }
 
+var youtube = require('./services/youtube.js')
+var translate = require('./services/translate.js')
+var pokemon = require('./services/pokemon.js')
+var spotify = require('./services/spotify')
+var weather = require('./services/openweathermap.js')
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.username}!`)
   // fonction d'écoute sur #botweet_jat
@@ -25,7 +31,23 @@ client.on('message', msg => {
   if (msg.content === 'hello') {
     msg.channel.send('Hello to you too, fellow !')
   }
-  // permet de tweeter un message grâce à la commande !tweet
+  // permet d'effectuer une recherche youtube
+  youtube.searchYoutube(msg)
+
+  // permet de traduire un message
+  translate.translate(msg)
+
+  // permet de tweeter avec l'utilisation de "!tweet"
   twitter.sendTweet(msg)
+
+  // permet de rechercher un pokemon et le faire évoluer
+  pokemon.pokemon(msg)
+
+  // permet d'effectuer une recherche spotify
+  spotify.spotify(msg)
+
+  // permet d'afficher l'état de la météo d'une ville
+  weather.Now(msg)
+  weather.Forecast(msg)
 })
 client.login(config.token)
