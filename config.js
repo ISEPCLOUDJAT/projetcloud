@@ -9,5 +9,4 @@ module.exports = {
   clientId: '132f44ff456c41d29d544a608b448bbd',
   clientSecret: '25d2c3ee445140bfa9aaa3d6bcdc194b',
   owm_token: 'fe3e3d9cb7972b81bc65b18feb8c132a'
-
 }
