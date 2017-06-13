@@ -37,7 +37,6 @@ module.exports = {
         throw error
       })
       .then((res) => {
-        console.log(res.data.list[0].main)
         var text = ''
         var x = res.data.cnt / 5
         var i = 1
